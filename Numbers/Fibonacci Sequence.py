@@ -13,10 +13,8 @@ def fib_seq(n):
 
 
 def input_integer():
-    
-    need_number = True
-    
-    while need_number:
+        
+    while True:
         
         try:
             n = int(input("Enter a number: "))
@@ -29,7 +27,6 @@ def input_integer():
                 print("Number must be positive.")
             else:
                 return n
-                need_number = False
                 break
 
 

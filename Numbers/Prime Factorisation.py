@@ -15,8 +15,8 @@ def input_integer():
                 print("Number must be positive.")
             else:
                 return n
-            need_number = False
-            break
+                need_number = False
+                break
 
 
 def prime_factors(n):

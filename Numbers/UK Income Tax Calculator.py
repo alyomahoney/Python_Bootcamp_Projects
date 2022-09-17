@@ -51,6 +51,7 @@ def calculate_net(g, s = False, tax_bands = tax_bands, tax_bands_sco = tax_bands
     g_str = str(g)
     
     if g_str < min(list(tax_bands)):
+        
         return g
     
     if s:
@@ -96,9 +97,7 @@ def display_net(n, g):
 def main():
     
     g = input_gross_salary()
-    
     s = live_in_scotland()
-    
     n = calculate_net(g, s = s)
     
     display_net(n, g)

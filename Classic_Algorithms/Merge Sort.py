@@ -6,7 +6,7 @@ def input_list():
     while not len(response) or not valid_response:
         
         try:
-            response = list(map(int,input('\nEnter the numbers of the list you wish to sort, separated by spaces: ').strip().split()))
+            response = list(map(float,input('\nEnter the numbers of the list you wish to sort, separated by spaces: ').strip().split()))
             
         except:
             print('\nThat is not a valid numerical list. Please enter the numbers of a list separated by spaces.')
@@ -62,8 +62,10 @@ def merge_sort(s):
 
 def display_sorted_list(s):
     
+    formatted_list = [('%f' % i).rstrip('0').rstrip('.') for i in s]
+
     print('\nThe sorted list is:')
-    print(*s, sep = ', ')
+    print(*formatted_list, sep = ', ')
 
 
 def main():
